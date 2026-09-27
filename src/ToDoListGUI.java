@@ -52,11 +52,14 @@ public class ToDoListGUI {
 
         frame.setVisible(true);
     }
-
+    
+    // This (Class or method)
     private void addTask() {
         String taskName = taskInput.getText();
         
         if (taskName.isEmpty()) {
+        	taskInput.setBorder(BorderFactory.createDashedBorder(Color.RED));
+        	
         	JOptionPane.showMessageDialog(null, "The \"Task: \" text box can't be empty while adding a new task.");
         	return;
         }
